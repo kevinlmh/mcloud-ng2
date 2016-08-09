@@ -1,16 +1,43 @@
-<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-  <thead>
-    <tr>
-      <th class="mdl-data-table__cell--non-numeric">Filename</th>
-      <th>Size</th>
-      <th>Date Created</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let file of files">
-      <td class="mdl-data-table__cell--non-numeric">{{file.name}}</td>
-      <td>{{file.length}}</td>
-      <td>{{file.uploadDate}}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col">
+      <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+        <thead>
+          <tr>
+            <th class="mdl-data-table__cell--non-numeric">Filename</th>
+            <th>Size</th>
+            <th>Date Created</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let file of files">
+            <td class="mdl-data-table__cell--non-numeric">{{file.filename}}</td>
+            <td>{{file.length}}</td>
+            <td>{{file.uploadDate}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- file selector and upload -->
+    <div class="mdl-cel mdl-cell--6-col">
+      <form action="#">
+        <input class="" type="file" id="selectedFile">
+        <button type="submit">Upload</button>
+      </form>
+      <!-- Simple Textfield 
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" id="selectedFile">
+          <label class="mdl-textfield__label" for="selectedFile">Select a file to upload</label>
+        </div>
+      </form>
+      <!-- Raised button
+      <button class="mdl-button mdl-js-button mdl-button--raised">
+        Select
+      </button>
+      <!-- Colored raised button
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+        Upload
+      </button>
+      -->
+    </div>
+</div>

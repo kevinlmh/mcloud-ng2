@@ -1,5 +1,5 @@
 export class File {
-    name: string;
+    filename: string;
     length: number;
     uploadDate: string;
 }
