@@ -1,0 +1,16 @@
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Filename</th>
+      <th>Size</th>
+      <th>Date Created</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let file of files">
+      <td class="mdl-data-table__cell--non-numeric">{{file.name}}</td>
+      <td>{{file.length}}</td>
+      <td>{{file.uploadDate}}</td>
+    </tr>
+  </tbody>
+</table>
