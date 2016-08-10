@@ -1,5 +1,8 @@
 export class File {
+    _id: string;
     filename: string;
-    length: number;
+    chunkSize: number;
     uploadDate: string;
+    length: number;
+    md5: string;
 }

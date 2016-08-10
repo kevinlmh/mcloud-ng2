@@ -15,7 +15,12 @@ var FileGridComponent = (function () {
         this.fileService = fileService;
     }
     FileGridComponent.prototype.ngOnInit = function () {
-        this.files = this.fileService.getFiles();
+        var _this = this;
+        this.fileService.getFiles().then(function (files) { return _this.files = files; });
+    };
+    FileGridComponent.prototype.onDownload = function (id) {
+        console.log('download button click, id: ' + id);
+        this.fileService.getFile(id);
     };
     FileGridComponent = __decorate([
         core_1.Component({
