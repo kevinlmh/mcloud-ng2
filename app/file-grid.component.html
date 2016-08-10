@@ -1,16 +1,24 @@
 <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
   <thead>
     <tr>
+      <th>ID</th>
       <th class="mdl-data-table__cell--non-numeric">Filename</th>
       <th>Size</th>
       <th>Date Created</th>
+      <th class="mdl-data-table__cell--non-numeric">Download</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let file of files">
-      <td class="mdl-data-table__cell--non-numeric">{{file.name}}</td>
+      <td>{{file._id}}</td>
+      <td class="mdl-data-table__cell--non-numeric">{{file.filename}}</td>
       <td>{{file.length}}</td>
       <td>{{file.uploadDate}}</td>
+      <td>
+        <button class="mdl-button mdl-js-button mdl-button--icon" (click)="onDownload(file._id)">
+          <i class="material-icons">file_download</i>
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>

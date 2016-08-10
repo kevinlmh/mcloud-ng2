@@ -13,6 +13,11 @@ export class FileGridComponent implements OnInit {
     constructor(private fileService: FileService) { }
 
     ngOnInit() { 
-        this.files = this.fileService.getFiles();
+        this.fileService.getFiles().then(files => this.files = files);
+    }
+
+    onDownload(id: string) {
+        console.log('download button click, id: ' + id);
+        this.fileService.getFile(id);
     }
 }
