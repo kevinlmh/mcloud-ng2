@@ -15,9 +15,9 @@
       <td>{{file.length}}</td>
       <td>{{file.uploadDate}}</td>
       <td>
-        <button class="mdl-button mdl-js-button mdl-button--icon" (click)="onDownload(file._id)">
+        <a class="mdl-button mdl-js-button mdl-button--icon" href="{{file.link}}" target="_blank">
           <i class="material-icons">file_download</i>
-        </button>
+        </a>
       </td>
     </tr>
   </tbody>

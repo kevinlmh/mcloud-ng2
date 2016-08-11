@@ -5,4 +5,5 @@ export class File {
     uploadDate: string;
     length: number;
     md5: string;
+    link: string;
 }
