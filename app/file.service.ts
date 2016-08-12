@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import { File } from './file';
-import { FILES } from './mock-files';
 
 @Injectable()
 export class FileService {

@@ -1,22 +1,51 @@
-<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+<ol class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Library</a></li>
+  <li class="active">Data</li>
+</ol>
+
+<div class="btn-toolbar" role="toolbar" aria-label="...">
+  <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="glyphicon glyphicon-cloud-upload"></span>   Upload
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#"><span class="glyphicon glyphicon-file"></span>  File</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-folder-open"></span>  Folder</a></li>
+    </ul>
+  </div>
+  <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">Left</button>
+    <button type="button" class="btn btn-default">Middle</button>
+    <button type="button" class="btn btn-default">Right</button>
+  </div>
+  <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">Left</button>
+    <button type="button" class="btn btn-default">Middle</button>
+    <button type="button" class="btn btn-default">Right</button>
+  </div>
+</div>
+
+<table class="table table-hover">
   <thead>
     <tr>
       <th>ID</th>
-      <th class="mdl-data-table__cell--non-numeric">Filename</th>
+      <th>Filename</th>
       <th>Size</th>
       <th>Date Created</th>
-      <th class="mdl-data-table__cell--non-numeric">Download</th>
+      <th>Download</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let file of files">
       <td>{{file._id}}</td>
-      <td class="mdl-data-table__cell--non-numeric">{{file.filename}}</td>
+      <td>{{file.filename}}</td>
       <td>{{file.length}}</td>
       <td>{{file.uploadDate}}</td>
       <td>
-        <a class="mdl-button mdl-js-button mdl-button--icon" href="{{file.link}}" target="_blank">
-          <i class="material-icons">file_download</i>
+        <a class="btn btn-default" href="{{file.link}}" target="_blank">
+          <span class="glyphicon glyphicon-cloud-download"></span>
         </a>
       </td>
     </tr>

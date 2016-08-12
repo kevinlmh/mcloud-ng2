@@ -10,23 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var file_grid_component_1 = require('./file-grid.component');
+var navigation_links_1 = require('./navigation-links');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'File Manager';
-        this.navLinks = [
-            {
-                title: 'Files',
-                link: '#'
-            },
-            {
-                title: 'Users',
-                link: '#'
-            },
-            {
-                title: 'Settings',
-                link: '#'
-            }
-        ];
+        this.navLinks = navigation_links_1.NAVLINKS;
     }
     AppComponent = __decorate([
         core_1.Component({

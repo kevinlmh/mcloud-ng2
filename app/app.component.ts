@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FileGridComponent } from './file-grid.component';
+import { NAVLINKS } from './navigation-links';
 
 @Component({
   selector: 'my-app',
@@ -9,18 +10,5 @@ import { FileGridComponent } from './file-grid.component';
 
 export class AppComponent {
   title = 'File Manager';
-  navLinks = [
-    {
-      title: 'Files',
-      link: '#'
-    },
-    {
-      title: 'Users',
-      link: '#'
-    },
-    {
-      title: 'Settings',
-      link: '#'
-    }
-  ];
+  navLinks = NAVLINKS;
 }
