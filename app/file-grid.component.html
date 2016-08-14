@@ -1,32 +1,31 @@
-<ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Library</a></li>
+<ul class="breadcrumb">
+  <li>
+    <a href="#">Home</a>
+  </li>
+  <li>
+    <a href="#">Library</a>
+  </li>
   <li class="active">Data</li>
-</ol>
-
-<div class="btn-toolbar" role="toolbar" aria-label="...">
-  <div class="btn-group" role="group" aria-label="...">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="glyphicon glyphicon-cloud-upload"></span>   Upload
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-      <li><a href="#"><span class="glyphicon glyphicon-file"></span>  File</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-folder-open"></span>  Folder</a></li>
+</ul>
+<div class="btn-toolbar" role="toolbar">
+  <div class="btn-group">
+    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="fa fa-upload fa-fw" aria-hidden="true"></span> Upload <span class="fa fa-caret-down"></span></a>
+    <ul class="dropdown-menu" role="menu">
+      <li>
+        <a href="#"><i class="fa fa-file fa-fw" aria-hidden="true"></i> File </a>
+        <a href="#"><i class="fa fa-folder fa-fw" aria-hidden="true"></i> Folder </a>
+      </li>
     </ul>
   </div>
-  <div class="btn-group" role="group" aria-label="...">
-    <button type="button" class="btn btn-default">Left</button>
-    <button type="button" class="btn btn-default">Middle</button>
-    <button type="button" class="btn btn-default">Right</button>
+  <div class="btn-group">
+    <a type="button" class="btn btn-default">Left</a>
+    <a type="button" class="btn btn-default">Middle</a>
+    <a type="button" class="btn btn-default">Right</a>
   </div>
-  <div class="btn-group" role="group" aria-label="...">
-    <button type="button" class="btn btn-default">Left</button>
-    <button type="button" class="btn btn-default">Middle</button>
-    <button type="button" class="btn btn-default">Right</button>
+  <div class="btn-group">
+    <a type="button" class="btn btn-danger"><i class="fa fa-fw fa-trash"></i> Delete </a>
   </div>
 </div>
-
 <table class="table table-hover">
   <thead>
     <tr>
@@ -44,9 +43,7 @@
       <td>{{file.length}}</td>
       <td>{{file.uploadDate}}</td>
       <td>
-        <a class="btn btn-default" href="{{file.link}}" target="_blank">
-          <span class="glyphicon glyphicon-cloud-download"></span>
-        </a>
+        <a class="btn btn-default" href="{{file.link}}" target="_blank" type="button"><i class="fa fa-download" aria-hidden="true"></i></a>
       </td>
     </tr>
   </tbody>
