@@ -9,7 +9,6 @@ const URL = 'http://localhost:5000/api/v1/';
 @Component({
     selector: 'file-grid',
     templateUrl: 'app/file-grid.component.html',
-    providers: [FileService],
     directives: [FILE_UPLOAD_DIRECTIVES, NgClass, NgStyle, CORE_DIRECTIVES, FORM_DIRECTIVES]
 })
 export class FileGridComponent implements OnInit {

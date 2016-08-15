@@ -9,17 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var file_grid_component_1 = require('./file-grid.component');
+var navigation_links_1 = require('./navigation-links');
+var FilesComponent = (function () {
+    function FilesComponent() {
+        this.title = 'File Manager';
+        this.navLinks = navigation_links_1.NAVLINKS;
     }
-    AppComponent = __decorate([
+    FilesComponent.prototype.ngOnInit = function () { };
+    FilesComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/app.component.html',
+            selector: 'files',
+            templateUrl: 'app/files.component.html',
+            directives: [file_grid_component_1.FileGridComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], FilesComponent);
+    return FilesComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.FilesComponent = FilesComponent;
+//# sourceMappingURL=files.component.js.map

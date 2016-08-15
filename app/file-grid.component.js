@@ -30,7 +30,6 @@ var FileGridComponent = (function () {
         core_1.Component({
             selector: 'file-grid',
             templateUrl: 'app/file-grid.component.html',
-            providers: [file_service_1.FileService],
             directives: [ng2_file_upload_1.FILE_UPLOAD_DIRECTIVES, common_1.NgClass, common_1.NgStyle, common_1.CORE_DIRECTIVES, common_1.FORM_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [file_service_1.FileService])
