@@ -11,11 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var file_service_1 = require('./file.service');
 var common_1 = require('@angular/common');
-var ng2_file_upload_1 = require('ng2-file-upload');
+var ng2_file_upload_1 = require('ng2-file-upload/ng2-file-upload');
 var URL = 'http://localhost:5000/api/v1/';
 var FileGridComponent = (function () {
     function FileGridComponent(fileService) {
         this.fileService = fileService;
+        this.uploader = new ng2_file_upload_1.FileUploader({ url: URL });
     }
     FileGridComponent.prototype.ngOnInit = function () {
         var _this = this;
