@@ -10,6 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var file_service_1 = require('./file.service');
+var common_1 = require('@angular/common');
+var ng2_file_upload_1 = require('ng2-file-upload');
+var URL = 'http://localhost:5000/api/v1/';
 var FileGridComponent = (function () {
     function FileGridComponent(fileService) {
         this.fileService = fileService;
@@ -26,7 +29,8 @@ var FileGridComponent = (function () {
         core_1.Component({
             selector: 'file-grid',
             templateUrl: 'app/file-grid.component.html',
-            providers: [file_service_1.FileService]
+            providers: [file_service_1.FileService],
+            directives: [ng2_file_upload_1.FILE_UPLOAD_DIRECTIVES, common_1.NgClass, common_1.NgStyle, common_1.CORE_DIRECTIVES, common_1.FORM_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [file_service_1.FileService])
     ], FileGridComponent);
