@@ -4,11 +4,10 @@ import { Component, OnInit } from '@angular/core';
     selector: 'login',
     templateUrl: 'APP/login.component.html',
     styles: [`
-        body {
-            padding-top: 40px;
-            padding-bottom: 40px;
+        .container-fluid {
+            background: url(http://www.skystarventures.com/wp-content/uploads/2014/03/White-Background.jpg) no-repeat center center fixed;
+            height: 100%;
         }
-
         .form-signin {
             max-width: 330px;
             padding: 15px;

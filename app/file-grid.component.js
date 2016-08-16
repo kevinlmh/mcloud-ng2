@@ -15,10 +15,19 @@ var ng2_file_upload_1 = require('ng2-file-upload/ng2-file-upload');
 var URL = 'http://localhost:5000/api/v1/';
 var FileGridComponent = (function () {
     function FileGridComponent(fileService) {
+        var _this = this;
         this.fileService = fileService;
         this.uploader = new ng2_file_upload_1.FileUploader({ url: URL });
+        this.uploader.onCompleteItem = function (item, response, status, headers) {
+            _this.getFiles();
+        };
+        // this.uploader.onCompleteAll = () => {
+        // };
     }
     FileGridComponent.prototype.ngOnInit = function () {
+        this.getFiles();
+    };
+    FileGridComponent.prototype.getFiles = function () {
         var _this = this;
         this.fileService.getFiles().then(function (files) { return _this.files = files; });
     };

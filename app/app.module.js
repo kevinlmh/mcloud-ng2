@@ -16,6 +16,7 @@ var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing');
 var file_grid_component_1 = require('./file-grid.component');
 var files_component_1 = require('./files.component');
+var login_component_1 = require('./login.component');
 var file_service_1 = require('./file.service');
 var AppModule = (function () {
     function AppModule() {
@@ -31,7 +32,8 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 file_grid_component_1.FileGridComponent,
-                files_component_1.FilesComponent
+                files_component_1.FilesComponent,
+                login_component_1.LoginComponent
             ],
             providers: [
                 file_service_1.FileService

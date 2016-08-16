@@ -12,13 +12,24 @@ const URL = 'http://localhost:5000/api/v1/';
     directives: [FILE_UPLOAD_DIRECTIVES, NgClass, NgStyle, CORE_DIRECTIVES, FORM_DIRECTIVES]
 })
 export class FileGridComponent implements OnInit {
-    uploader:FileUploader = new FileUploader({url: URL});
-
+    uploader: FileUploader;
     files: File[];
     
-    constructor(private fileService: FileService) { }
+    constructor(private fileService: FileService) {
+        this.uploader = new FileUploader({url: URL});
+        this.uploader.onCompleteItem = (item: any, response: any, status: any, headers: any) => {
+            this.getFiles();
+        };
+        // this.uploader.onCompleteAll = () => {
+
+        // };
+    }
 
     ngOnInit() { 
+        this.getFiles();
+    }
+
+    getFiles() {
         this.fileService.getFiles().then(files => this.files = files);
     }
 
